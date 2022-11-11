@@ -1,0 +1,16 @@
+.logo {
+  font-family: var(--other-font-family);
+  font-style: normal;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: var(--main-title-text-color);
+  text-decoration: none;
+
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.logo--blue {
+  color: var(--accent-color);
+}

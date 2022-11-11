@@ -1,0 +1,28 @@
+.team__social {
+  margin-bottom: 30px;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--icon-color);
+  border-radius: 50%;
+  transition: var(--transition-duration) var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--other-title-color);
+  }
+}
+.social__icon {
+  fill: currentColor;
+}

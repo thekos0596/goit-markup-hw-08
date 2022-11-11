@@ -1,0 +1,183 @@
+.backdrop {
+  position: fixed;
+  visibility: visible;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--transition-duration) var(--transition-timing-function),
+    visibility var(--transition-duration) var(--transition-timing-function);
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  background-color: var(--other-title-color);
+  transition: transform var(--transition-duration) var(--transition-timing-function);
+}
+.modal__button--close {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--other-title-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.modal__close--icon {
+  transition: var(--transition-duration) var(--transition-timing-function);
+  .modal__button--close:hover & {
+    fill: var(--accent-color);
+  }
+}
+
+.modal-form {
+  padding: 40px;
+}
+.modal__title {
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-title-text-color);
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+
+.modal-form__label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+.modal-input-wrapper {
+  position: relative;
+}
+.modal-form-input {
+  width: 100%;
+  min-height: 40px;
+  padding-left: 32px;
+  fill: var(--main-title-text-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: var(--transition-duration) var(--transition-timing-function);
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+.modal-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translatey(-50%);
+  .modal-form-input:focus + & {
+    fill: var(--accent-color);
+  }
+}
+
+.modal-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  transition: var(--transition-duration) var(--transition-timing-function);
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:focus {
+    border-color: var(--accent-color);
+  }
+  &:focus::-webkit-input-placeholder {
+    color: var(--accent-color);
+  }
+}
+
+.checkbox-container {
+  position: relative;
+  margin-bottom: 30px;
+}
+.modal-checkbox {
+  appearance: none;
+  &:checked + .checkbox-icon {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    border: none;
+    fill-opacity: 1;
+  }
+}
+.checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  z-index: -1;
+  fill: var(--other-title-color);
+  fill-opacity: 0;
+  border: 2px solid var(--main-title-text-color);
+  border-radius: 2px;
+  transition: var(--transition-duration) var(--transition-timing-function);
+}
+
+.checkbox-label {
+  display: inline-block;
+  padding-left: 37px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  cursor: pointer;
+}
+.checkbox-link {
+  color: var(--accent-color);
+  text-decoration-skip-ink: none;
+}
+
+.modal-form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  min-width: 200px;
+  min-height: 50px;
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  text-align: center;
+  cursor: pointer;
+  color: var(--other-title-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+}
