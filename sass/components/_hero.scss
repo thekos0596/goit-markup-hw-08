@@ -1,8 +1,13 @@
 .hero {
   max-width: 1600px;
   height: 600px;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/background-hero.jpg');
+  margin: 0 auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/background-hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--background-color);
