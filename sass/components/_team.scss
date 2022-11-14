@@ -2,15 +2,25 @@
   background-color: var(--card-background-color);
 }
 .team__title {
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.1;
   letter-spacing: 0.03em;
   text-align: center;
-  padding-bottom: 50px;
+  margin-bottom: 30px;
+
+  @media (min-width: 1200px) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 .team__card--list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+
+  @media (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
 }
 .team__card--item {
   text-align: center;
@@ -18,16 +28,32 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
+  @media (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+  }
 }
-.team__card--name {
+.team__meta {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  background-color: #fff;
+
+  @media (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
+}
+.team__name {
   font-size: 16px;
-  line-height: 1.1;
+  line-height: 1.17;
   letter-spacing: 0.03em;
-  padding: 30px 0px 10px 0;
+  margin-bottom: 10px;
 }
-.team__card--position {
-  line-height: 1.1;
+.team__position {
+  line-height: 1.17;
   letter-spacing: 0.03em;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
   color: var(--primary-text-color);
 }

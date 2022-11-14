@@ -153,9 +153,7 @@
   margin-bottom: auto;
 }
 .mobile-menu__item:not(:last-child) {
-  @media (min-width: 480px) {
-    margin-bottom: 32px;
-  }
+  margin-bottom: 32px;
 }
 .mobile-menu__link {
   text-decoration: none;
@@ -206,22 +204,7 @@
     margin-bottom: 64px;
   }
 }
-.contacts__link {
-  text-decoration: none;
-  font-family: inherit;
-  color: inherit;
-  display: block;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.172;
-  letter-spacing: 0.02em;
-  text-align: start;
-  text-transform: none;
-  color: inherit;
-}
+
 .contacts__link--header {
   text-decoration: none;
   font-family: inherit;

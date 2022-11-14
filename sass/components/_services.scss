@@ -1,5 +1,10 @@
 .services {
-  padding: 0px 0px 94px;
+  @media (max-width: 1199px) {
+    display: none;
+  }
+  @media (min-width: 1200px) {
+    padding-bottom: 94px;
+  }
 }
 
 .services__title {
@@ -7,7 +12,7 @@
   line-height: 1.1;
   letter-spacing: 0.03em;
   text-align: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 .services__list {
   display: flex;

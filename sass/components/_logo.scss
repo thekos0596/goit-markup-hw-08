@@ -1,12 +1,21 @@
 .logo {
   font-family: var(--other-font-family);
   font-style: normal;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
-  color: var(--main-title-text-color);
+  text-align: start;
   text-decoration: none;
+  padding: 16px 0;
+  color: var(--main-title-text-color);
 
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+  @media (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.383;
+  }
   &:focus {
     color: var(--accent-color);
   }
