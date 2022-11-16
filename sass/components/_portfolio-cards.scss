@@ -18,6 +18,12 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio__card {
+  &:not(:first-child) {
+    @media (max-width: 767px) {
+      margin-top: 30px;
+    }
+  }
+
   @media (min-width: 768px) {
     width: calc((100% - 30px) / 2);
   }
